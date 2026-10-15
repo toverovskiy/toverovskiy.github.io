@@ -1,0 +1,157 @@
+:root {
+  font-size: 100%;
+}
+
+.site-shell {
+  min-height: 100vh;
+}
+
+.site-header {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 1.5rem 0 1.25rem;
+  border-bottom: 1px solid var(--ids__border);
+}
+
+.site-name,
+.site-header nav {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.ids .site-name {
+  color: var(--ids__text);
+}
+
+.ids a.site-name:hover {
+  color: var(--ids__hover);
+}
+
+.site-header nav span[aria-current="page"] {
+  color: var(--ids__text);
+}
+
+.home-main,
+.principles-main {
+  padding: clamp(4rem, 12vh, 8rem) 0 5rem;
+}
+
+.ids h1.home-lead {
+  max-width: 60rem;
+  margin-bottom: 0;
+  line-height: 1.12;
+  text-wrap: pretty;
+}
+
+.home-columns {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1.5rem, 3vw, 3rem);
+  margin-top: 4.5rem;
+}
+
+.ids .link-column h2 {
+  margin-bottom: 1.25rem;
+}
+
+.link-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.65rem;
+  line-height: 1.4;
+}
+
+.link-group + .link-group {
+  margin-top: 1.75rem;
+}
+
+.link-group > a {
+  display: block;
+}
+
+.path {
+  margin-top: 6rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--ids__border);
+}
+
+.ids .path h2 {
+  margin-bottom: 1.75rem;
+}
+
+.path-group {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.path-row {
+  display: grid;
+  grid-template-columns: 8rem minmax(0, 1fr);
+  gap: 1.5rem;
+  line-height: 1.45;
+}
+
+.path-date {
+  color: var(--ids__text-caption);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.path-row strong {
+  font-weight: 600;
+}
+
+.ids .principles-main h1 {
+  max-width: 18ch;
+  margin-bottom: 2.25rem;
+  text-wrap: balance;
+}
+
+.principles-copy {
+  max-width: 45rem;
+  font-size: 1.125rem;
+  line-height: 1.5;
+}
+
+.ids .principles-copy p {
+  margin-bottom: 1.35rem;
+}
+
+@media (max-width: 767px) {
+  .site-header {
+    padding: 1.25rem 0 1rem;
+  }
+
+  .home-main,
+  .principles-main {
+    padding: 4.5rem 0 4rem;
+  }
+
+  .ids h1.home-lead {
+    font-size: 1.65rem;
+  }
+
+  .principles-copy {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .home-columns {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+    margin-top: 4rem;
+  }
+
+  .path {
+    margin-top: 4.5rem;
+  }
+
+  .path-row {
+    grid-template-columns: max-content minmax(0, 1fr);
+    gap: 0.75rem;
+  }
+}
