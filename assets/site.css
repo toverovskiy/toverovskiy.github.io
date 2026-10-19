@@ -7,15 +7,16 @@
 }
 
 .site-header {
-  position: relative;
-  z-index: 1;
+  position: sticky;
+  top: 0;
+  z-index: 10;
   padding: 0;
   background: rgba(5, 5, 5, 0.88);
   border-bottom: 1px solid var(--ids__border);
 }
 
 .site-header--over-artwork {
-  position: absolute;
+  position: fixed;
   inset: 0 0 auto;
 }
 
@@ -82,9 +83,7 @@
 }
 
 .small-caps {
-  font-size: 0.78em;
-  font-weight: 600;
-  letter-spacing: 0.04em;
+  font-variant-caps: all-small-caps;
 }
 
 .home-content.ids__wrapper.L {
@@ -108,6 +107,11 @@
 
 .social-links__item {
   white-space: nowrap;
+}
+
+.social-links i {
+  font-style: italic;
+  font-synthesis: style;
 }
 
 .social-links__item:not(:last-child)::after {
