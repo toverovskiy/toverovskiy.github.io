@@ -67,7 +67,7 @@
 
 .home-artwork img {
   object-fit: cover;
-  object-position: center;
+  object-position: center bottom;
 }
 
 .ids .home-artwork {
@@ -80,10 +80,6 @@
 
 .caption-mobile {
   display: none;
-}
-
-.small-caps {
-  font-variant-caps: all-small-caps;
 }
 
 .home-content.ids__wrapper.L {
